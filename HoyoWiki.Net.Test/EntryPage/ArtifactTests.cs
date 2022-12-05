@@ -21,7 +21,7 @@ public class ArtifactTests
         var result = (await _artifact.GetListAsync(
             _artifact.Filters.ReliquaryEffect.Attack,
             _artifact.Filters.ReliquaryEffect.CriticalRate)).ToList();
-        Assert.That(result.Any(), Is.True);
+        Assert.That(result, Is.Not.Empty);
     }
     
     [Test]
